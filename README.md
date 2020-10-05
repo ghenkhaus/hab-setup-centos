@@ -27,6 +27,7 @@ $ adduser hab -g hab
 [Unit]
 Description=Habitat Supervisor
 [Service]
+Environment=HAB_LICENSE=accept-no-persist
 Environment=HAB_AUTH_TOKEN=<HAB_AUTH_TOKEN>
 ExecStart=/bin/hab run --auto-update --listen-gossip 0.0.0.0:9638 --listen-http 0.0.0.0:9631 --event-stream-application=<NAME_OF_APP> --event-stream-environment=<NAME_OF_ENV> --event-stream-site=<NAME_OF_SITE> --event-stream-url=<AUTOMATE_REPORTER_HOSTNAME>:4222 --event-stream-token=<AUTOMATE_REPORTER_TOKEN>
 [Install]
